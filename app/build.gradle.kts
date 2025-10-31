@@ -6,6 +6,7 @@ android {
     namespace = "com.example.temidummyapp"
 
     // 최신 SDK로 빌드하되, 타깃은 23 (Marshmallow)
+    //noinspection GradleDependency
     compileSdk = 34
 
     defaultConfig {
@@ -41,12 +42,12 @@ dependencies {
     implementation(libs.material)
 
     // ConstraintLayout 사용 중이므로 반드시 추가
-    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
+    implementation(libs.constraintlayout)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 
     // Temi SDK 추가
-    implementation("com.robotemi:sdk:1.136.0")
+    implementation(libs.temi.sdk)
 }
