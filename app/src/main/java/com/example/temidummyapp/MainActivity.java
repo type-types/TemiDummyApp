@@ -1,10 +1,12 @@
 package com.example.temidummyapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,6 +26,16 @@ public class MainActivity extends AppCompatActivity {
         // 텍스트 설정
         TextView title = findViewById(R.id.title);
         title.setText(R.string.temi_title);
+
+        // 사진 찍기 카드 클릭 리스너 설정
+        CardView cardPhoto = findViewById(R.id.card_photo);
+        cardPhoto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, PhotoTemi.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
