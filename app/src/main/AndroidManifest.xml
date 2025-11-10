@@ -50,6 +50,18 @@
             android:exported="false"
             android:screenOrientation="landscape" />
 
+        <!-- ✅ 메뉴 추천 Activity 등록 -->
+        <activity
+            android:name=".MenuActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <!-- ✅ 주요 부스 검색 Activity 등록 -->
+        <activity
+            android:name=".EventActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
         <!-- ✅ Temi Skill 등록 (이 부분 추가) -->
         <meta-data
             android:name="com.robotemi.sdk.metadata.SKILL"

@@ -36,6 +36,26 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        // 메뉴 추천 카드 클릭 리스너 설정
+        CardView cardMenu = findViewById(R.id.card_menu);
+        cardMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, MenuActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        // 주요 부스 카드 클릭 리스너 설정
+        CardView cardBooth = findViewById(R.id.card_booth);
+        cardBooth.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, EventActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
